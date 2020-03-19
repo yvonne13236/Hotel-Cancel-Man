@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="C:\Users\Luo Yang\Desktop\flask\Static\css\style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+
+  <style type='text/css'>
+     
+      
+    form {
+      border: 3px solid #f1f1f1;
+    }
+
+    form {
+      width: 650px;
+      margin: 0 auto;
+    }
+
+    input[type=number],
+    input[type=password] {
+      width: 80%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    .container {
+      padding: 16px;
+      width: 70%;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+
+      .cancelbtn {
+        width: 100%;
+      }
+    }
+
+    .jumbotron {
+
+      /* background-color:gray; */
+      margin-top: 50x;
+      margin-left: 150px;
+      margin-right: 160px;
+      color: black;
+      padding-left: 5%;
+      padding-right: 5%;
+
+    }
+
+    .instruction {
+      /* background-image: url("omg.png"); */
+      /* background-color :rgba(227, 238, 179, 0.966); */hbuj
+      color: black;
+      font-size: "60";
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page-header {
+    
+    text-align:center;
+      background-color: rgb(128, 97, 134);
+      color: white;
+      width: 50%;
+      height: 100;
+      margin-left: 25%;
+        
+        
+    }
+
+    h2 {
+      font-family: Arial, Helvetica, sans-serif
+    }
+      
+    h4 {
+      font-family: Lucida Console, Monospace
+    }
+      
+    p {
+      font-size: "40";
+    }
+
+    }
+      
+</style>
+
+</head>
+
+<body >
+    <div class="page-header">
+        <h2 style="font-size:25px">Hotel Man</h2>
+    </div>
+    
+    
+    <form id="modelForm" class="form-inline">
+        
+        <div>
+            
+        <label for="relation">What kind of hotel?</label>
+        <select id="hotel" name="hotel">
+          <option value="0">City Hotel</option>
+          <option value="1">Resort Hotel</option>
+        </select>
+                        
+        </div>
+        
+          <div>
+                <label for="relation">Arrival Month</label>
+        <select id="arrival_month" name="arrival_month">
+          <option value="0">April</option>
+          <option value="1">August</option>
+          <option value="2">December</option>
+          <option value="3">February</option>
+          <option value="4">January</option>
+          <option value="5">July</option>
+          <option value="6">June</option>
+          <option value="7">March</option>
+          <option value="8">May</option>
+          <option value="9">November</option>
+          <option value="10">October</option>
+          <option value="11">September</option>
+        </select>    
+            
+          </div>
+
+        <div>
+        <label for="relation">Meal</label>
+        <select id="meal" name="meal">
+          <option value="0">BB</option>
+          <option value="1">FB</option>
+          <option value="2">HB</option>
+          <option value="3">SC</option>
+          <option value="4">Undefined</option>
+        </select>  
+         </div>
+        
+       <div> 
+           <label for="relation">Market Segment</label>
+        <select id="MS" name="MS">  
+          <option value="0">Aviation</option>
+          <option value="1">Complementary</option>
+          <option value="2">Corporate</option>
+          <option value="3">Direct</option>
+          <option value="4">Group</option>
+          <option value="5">Offline TA/TO</option>
+          <option value="6">Online TA</option>
+          <option value="7">Undefined</option>
+        </select>  
+       </div>
+        
+       <div> 
+           <label for="relation">Distribution Channel</label>
+        <select id="DC" name="DC">  
+          <option value="0">Corporate</option>
+          <option value="1">Direct</option>
+          <option value="2">GDS</option>
+          <option value="3">Direct</option>
+          <option value="4">TA/TO</option>
+          <option value="5">Undefined</option>
+        </select>  
+       </div>    
+
+       <div> 
+           <label for="relation">Reserved Room Type</label>
+        <select id="r_room_type" name="r_room_type">  
+          <option value="0">A</option>
+          <option value="1">B</option>
+          <option value="2">C</option>
+          <option value="3">D</option>
+          <option value="4">E</option>
+          <option value="5">F</option>
+          <option value="6">G</option>
+          <option value="7">H</option>
+          <option value="8">L</option>
+          <option value="9">P</option>
+        </select>  
+       </div>  
+
+        
+       <div> 
+           <label for="relation">Deposit Type</label>
+        <select id="deposit_type" name="deposit_type">  
+          <option value="0">No Deposit</option>
+          <option value="1">Non Refunded</option>
+          <option value="2">Refundable</option>
+        </select>  
+       </div>  
+
+       <div> 
+           <label for="relation">Customer Type</label>
+        <select id="customer_type" name="customer_type">  
+          <option value="0">Contract</option>
+          <option value="1">Group</option>
+          <option value="2">Transient</option>
+          <option value="3">Transient-Party</option>
+        </select>  
+       </div>  
+        
+<!--  Reservation Status      
+       <div> 
+           <label for="relation">Reservation Status</label>
+        <select id="RS" name="RS">  
+          <option value="0">Canceled</option>
+          <option value="1">Checked-out</option>
+          <option value="2">No-show</option>
+        </select>  
+       </div>  
+-->
+        
+        
+
+
+    <div id="result" class="result">
+
+      <button id="submitButton" type="button" class="btn btn-primary">Predict</button>
+
+      <h4 style="color:black">Will this booking be canceled?</h4>
+      <div id='reg' style="display:inline;">    </div>
+    </div>
+
+
+    </form>
+
+    
+    
+<!-- /* javascript */ -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      $('#submitButton').on('click', function () {
+        var hotel= $('#hotel').val();
+        var arrival_month= $('#arrival_month').val();
+        var meal= $('#meal').val();
+        var MS= $('#MS').val();
+        var DC= $('#DC').val();
+        var r_room_type= $('#r_room_type').val();
+        var deposit_type= $('#deposit_type').val();
+        var customer_type= $('#customer_type').val();
+
+        var req = fetch(
+          '/final',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+
+            body: JSON.stringify({ hotel: hotel, arrival_month:arrival_month, meal:meal, MS:MS,DC:DC,r_room_type:r_room_type,deposit_type:deposit_type,customer_type:customer_type }),
+          })
+
+          // after response get data from json 
+          .then((res) => res.json())
+
+          .then((data) => {
+            console.log(data);
+            // $('#display-0').html(data.result);
+            
+            jQuery('#reg').html('');
+            
+            document.getElementById('reg').innerHTML += '';
+           
+            
+           // document.getElementById('reg').textContent += data.result;  
+         
+             
+              if (data.result = "0") {
+                document.getElementById('reg').textContent += "The booking won't be canceled";
+              } else {
+                document.getElementById('reg').textContent += "The booking will be canceled.";
+              }
+              
+             });
+             });
+             });
+    
+    
+</script>  
+    
+</body>
+</html>
+
+
